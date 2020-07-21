@@ -1,0 +1,24 @@
+.menuList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menuItem {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.namePriceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price {
+    font-style: italic;
+}
+
+.description {
+    font-size: .9em;
+    color: #777;
+}

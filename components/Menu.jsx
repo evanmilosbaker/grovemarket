@@ -1,22 +1,35 @@
 import React from 'react';
+import styles from './Menu.module.css';
 
 const Menu = ({ menu }) => {
-  console.log('menu', menu);
+
   return (
-    <div>
+    <div className={styles.menuContainer}>
       <h3>Dinner Menu</h3>
-      <span>* all items subject to availability</span>
       {Object.keys(menu).map((menuType) => {
-        return (
-          <div key={menuType}>
-            <h4>{menuType}</h4>
-            <ul>
-              {menu[menuType].map((item) => {
-                return <li key={item}>{item}</li>;
-              })}
-            </ul>
-          </div>
-        );
+        const individualMenu = menu[menuType];
+        if (Array.isArray(individualMenu)) {
+          return (
+            <div key={menuType}>
+              <h4>{menuType}</h4>
+              <ul className={styles.menuList}>
+                {menu[menuType].map((item) => {
+                  return (
+                    <li key={item.itemName} className={styles.menuItem}>
+                      <div className={styles.namePriceContainer}>
+                        <span className={styles.itemName}>{item.itemName}</span>
+                        <span className={styles.price}>{item.price}</span>
+                      </div>
+                      <span className={styles.description}>{item.description}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        } else {
+          return <h4>{individualMenu}</h4>
+        }
       })}
     </div>
   );

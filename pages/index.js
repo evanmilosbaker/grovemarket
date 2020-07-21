@@ -3,10 +3,10 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 
-const Index = ({ title, description, coverPhoto, about, menu }) => {
+const Index = ({ header, subHeader, coverPhoto, about, menu }) => {
   return (
     <main>
-      <Header coverPhoto={coverPhoto} about={about} />
+      <Header coverPhoto={coverPhoto} about={about} header={header} subHeader={subHeader} />
       <Menu menu={menu} />
       <a href="tel:+14103525055"></a>
       <Footer />
