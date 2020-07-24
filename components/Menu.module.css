@@ -1,3 +1,23 @@
+.menuContainer {
+    padding: 0 30px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.menuType {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menuSection {
+    margin-top: 50px;
+}
+
+.menuHeader {
+    font-style: italic;
+    margin-top: -10px;
+    display: block;
+}
 .menuList {
     list-style-type: none;
     padding-left: 0;
@@ -6,12 +26,15 @@
 .menuItem {
     display: block;
     margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
 }
 
 .namePriceContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .price {

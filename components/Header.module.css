@@ -1,4 +1,29 @@
 .headerContainer {
     width: 100%;
     text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90VH;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.header, .subHeader, .about {
+    margin: 0 30px 30px 30px;
+    max-width: 680px;
+}
+
+.header {
+    font-size: 3rem;
+}
+
+.about {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    background: rgba(0, 0, 0, 0.7)
 }
