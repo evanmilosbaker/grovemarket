@@ -3,8 +3,8 @@ import styles from './Menu.module.css';
 import { parseArrayToObject } from '../lib/utils';
 
 const Menu = ({ menus }) => {
-  const { seafood, entrees, appetizers, dessert } = parseArrayToObject(menus, 'key');
-  const dinnerMenu = [entrees, appetizers, dessert]  
+  const { seafood, entrees, appetizers } = parseArrayToObject(menus, 'key');
+  const dinnerMenu = [entrees, appetizers]  
   return (
     <div className={styles.menuContainer}>
       <h3 className={styles.menuType}>Dinner Menu</h3>
