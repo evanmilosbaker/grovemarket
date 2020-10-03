@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Menu.module.css';
 import { parseArrayToObject } from '../lib/utils';
-// push changes
+// push changes deploy
 const Menu = ({ menus }) => {
   const { seafood, entrees, appetizers } = parseArrayToObject(menus, 'key');
   const dinnerMenu = [entrees, appetizers]  
